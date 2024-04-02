@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DU AN WEB 001</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@700&family=Markazi+Text:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@700&family=Imbue&family=Markazi+Text:wght@600&family=Playfair+Display:ital,wght@1,600&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="test.js"></script>
+<style>
+.site__content-new{
+        margin-top:100px;
+    }
+</style>
+<script>
+    function Showtb() {
+            alert("GửI Yêu Cầu Thành Công! Cảm ơn bạn đã tin tưởng Sanchoz Design");
+            // window.location.href = "C:/Users/Admin/OneDrive/Tài liệu/LibraryCode/HTML_Document/DuanWeb001/index.html"; // Điều hướng đến trang khác
+        }
+        function sendForm() {
+    // đem tất cả dữ liệu trong form id là 'google-form' gom thành biến data
+    let data = $('#google-form').serialize();
+
+    $.ajax({ //Sử dụng Ajax gửi dữ liệu đi
+        url: 'https://script.google.com/macros/s/AKfycbyp6NLnu3CqeAoFPtXl_NI9B0qfh6R8PQ_ZFPZwL7VzdrZK-8d8fJsRw86RWM9dGyWiQw/exec',
+        method: 'GET',
+        dataType: 'json',
+        data: data,
+        success: function(responseData, textStatus, jqXHR) {
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(errorThrown);
+        }
+    });
+
+    window.jQuery(this).trigger('reset');
+    alert('Success!');
+
+    return true;
+};
+
+
+</script>
+</head>
+<body>
+    <div class="fullweb">
+        <div class="linepage"></div>
+        <div class="site__header-inner">
+            <div class="site-branding">
+            <a class="header_navbar-item--link "href="#main">
+                <img src="assets\img\Sanchoz.png" class="logo_header"></img>
+            </a>
+            </div>
+            </div>
+    <nav class="header__navbar">
+        <div class="navigation_wrapper">
+            <div class="site-search-wrapper">
+                <form action="" id="search-box">
+                    <input type="text" id="search-text" placeholder="Search......" required>
+                    <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    
+                </form>
+            </div>
+                <ul class="header_navbar-list">
+                   
+                    <li class="header_navbar-item ">
+                        <a class="header_navbar-item--link" href="index.html">Trang chủ</a>
+                       
+                    </li>
+                    <li class="header_navbar-item ">
+                        <a class="header_navbar-item--link " href="gioithieu.html">Giới thiệu</a>
+                    </li>
+                    <li class="header_navbar-item ">
+                        <a class="header_navbar-item--link "href="#">Dịch vụ </a>
+                            <ul class="submenu">
+                            <li><a href="./dichvu--thietkenoithat.html" class="href">Thiết kế nội thất</a></li>
+                            <li><a href="./lienhe.html" class="href">Thi công nội thất</a></li>
+                            <li><a href="./lienhe.html" class="href">Cửa hàng nội thât</a></li>
+                    </ul>
+                    <li class="header_navbar-item ">
+                        <a class="header_navbar-item--link " href="./du-an.html">Dự án </a>
+                        
+                    </li>
+                    <li class="header_navbar-item ">
+                        <a class="header_navbar-item--link "href="#">Sản phẩm</a>
+                        <ul class="submenu">
+                            <li><a href="./lienhe.html" class="href">Thiết kế phòng khách</a></li>
+                            <li><a href="./lienhe.html" class="href">Thiết kế phòng ngủ</a></li>
+                            <li><a href="./lienhe.html" class="href">THiết kế tủ quần áo</a></li>
+                            <li><a href="./lienhe.html" class="href">Thiết kế ban công</a></li>
+                            <li><a href="./lienhe.html" class="href">Thiết kế ánh sáng 3D</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="header_navbar-item ">
+                        <a class="header_navbar-item--link "href="#">Tin tức </a>
+                        <ul class="submenu">
+                            <li><a href="./lienhe.html" class="href">Tin hoạt động </a></li>
+                            <li><a href="./lienhe.html" class="href">Cẩm nang nội thất</a></li>
+                            <li><a href="./lienhe.html" class="href">Phong thủy nội thất</a></li>
+                            <li><a href="./lienhe.html" class="href"></a></li>
+                          
+                        </ul>
+                    </li>
+                    <li class="header_navbar-item ">
+                        <a class="header_navbar-item--link " href="lienhe.html">Liên hệ</a>
+                    </li>
+                    <li class="menu__item-menuexpand menu__item-menuexpand--hover ">
+                        <a href="#"><i class="fa-solid fa-angle-down fa-beat-fade"></i></a>
+                     <div class="menu__item-expand"  >
+                        <div class="menu__item-expand-content">
+                              <ul class="menu__item-expand-list">
+                                <li class="menu__item-expand-item">
+                                    <a href="dangnhap.html" class="header_navbar-item--link ">Đăng kí </a>
+                                </li>
+                                <li class="menu__item-expand-item">
+                                    <a href="dangnhap.html" class="header_navbar-item--link ">Đăng nhập</a>
+                                </li>
+                                <li class="menu__item-expand-item">
+                                    <a href="" class="header_navbar-item--link ">TV</a>
+                                </li>
+                              </ul>
+
+                        </div>
+                        <div class="menu__item-expand-info">
+
+
+                        </div>
+                     </div>
+                    </li>
+        </div>
+        </nav>
+
+         <!-- Nav mobile -->
+         <label for="nav-mobile-input" class="nav__bars-btn">
+            <i style="color:rgb(0, 0, 0);font-size:2rem;" class="fa-solid fa-bars"></i>
+        </label>
+        
+        <input type="checkbox" name="" id="nav-mobile-input" class="nav-input">
+        <!-- <h1>Sanchoz Design</h1> -->
+        <label for="nav-mobile-input" class="nav__overlay"></label>
+        <nav class="header__navbar__mobile">
+            <label for="nav-mobile-input" class="nav__close__mb">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </label>
+            <div class="navigation_wrapper__mobile">
+                <div class="site-search-wrapper__mobile">
+                     <form action="" id="search-box">
+                        <input type="text" id="search-text" placeholder="Search......" required>
+                        <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        
+                    </form> 
+                </div>
+                    <ul class="header_navbar-list__mobile">
+                       
+                        <li class="header_navbar-item__mobile">
+                            <a class="header_navbar-item--link__mobile" href="index.html">Trang chủ</a>
+                           
+                        </li>
+                        <li class="header_navbar-item">
+                            <a class="header_navbar-item--link__mobile "href="gioithieu.html">Giới thiệu</a>
+                        </li>
+                        <li class="header_navbar-item ">
+                            <a class="header_navbar-item--link__mobile "href="#">Dịch vụ </a>
+                                <ul class="submenu">
+                                <li><a href="./dichvu--thietkenoithat.html" class="href">Thiết kế nội thất</a></li>
+                                <li><a href="./lienhe.html" class="href">Thi công nội thất</a></li>
+                                <li><a href="./lienhe.html" class="href">Cửa hàng nội thât</a></li>
+                        </ul>
+                        <li class="header_navbar-item ">
+                            <a class="header_navbar-item--link__mobile " href="du-an.html">Dự án </a>
+                            
+                        </li>
+                        <li class="header_navbar-item ">
+                            <a class="header_navbar-item--link__mobile "href="#">Sản phẩm</a>
+                            <ul class="submenu">
+                                <li><a href="./lienhe.html" class="href">Thiết kế phòng khách</a></li>
+                                <li><a href="./lienhe.html" class="href">Thiết kế phòng ngủ</a></li>
+                                <li><a href="./lienhe.html" class="href">THiết kế tủ quần áo</a></li>
+                                <li><a href="./lienhe.html" class="href">Thiết kế ban công</a></li>
+                                <li><a href="./lienhe.html" class="href">Thiết kế ánh sáng 3D</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="header_navbar-item ">
+                            <a class="header_navbar-item--link__mobile "href="#">Tin tức </a>
+                            <ul class="submenu">
+                                <li><a href="./lienhe.html" class="href">Tin hoạt động </a></li>
+                                <li><a href="./lienhe.html" class="href">Cẩm nang nội thất</a></li>
+                                <li><a href="./lienhe.html" class="href">Phong thủy nội thất</a></li>
+                                <li><a href="./lienhe.html" class="href"></a></li>
+                              
+                            </ul>
+                        </li>
+                        <li class="header_navbar-item ">
+                            <a class="header_navbar-item--link__mobile "href="lienhe.html">Liên hệ</a>
+                        </li>
+                        <li class="menu__item-menuexpand menu__item-menuexpand--hover ">
+                            <a href="#"><i class="fa-solid fa-angle-down fa-beat-fade"></i></a>
+                         <div class="menu__item-expand"  >
+                            <div class="menu__item-expand-content">
+                                  <ul class="menu__item-expand-list">
+                                    <li class="menu__item-expand-item">
+                                        <a href="dangnhap.html" class="header_navbar-item--link__mobile ">Đăng kí </a>
+                                    </li>
+                                    <li class="menu__item-expand-item">
+                                        <a href="dangnhap.html" class="header_navbar-item--link__mobile ">Đăng nhập</a>
+                                    </li>
+                                    <li class="menu__item-expand-item">
+                                        <a href="" class="header_navbar-item--link__mobile ">TV</a>
+                                    </li>
+                                  </ul>
+    
+                            </div>
+                            <div class="menu__item-expand-info">
+    
+    
+                            </div>
+                         </div>
+                        </li>
+            </div>
+            </nav>
+            <!-- Exit nav mobile -->
+        <div class="ladi-section-background-lh">
+
+        </div>
+        <div class="form-info">
+            <div class="form-container">
+                <div class="form-row">
+                    <div class="col-md-2">
+                        <form id="google-form" onsubmit="return sendForm();">
+                            
+                            <div class="form-left">
+                                <div class="fomr-info">
+                                    <h2>Thông tin cá nhân </h2>
+                                    <div class="form-item">
+                                        <input type="text" name="fullname" class="form-control" placeholder="Họ và tên" required >
+                                    </div>
+                                
+                                    <div class="form-item">
+                                        <input type="text" name="phonenumber" class="form-control" placeholder="Số điện thoại" required>
+                                    </div>
+                                    <div class="form-item">
+                                        <input type="text" name="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="form-info">
+                                    <h2>Thông tin dự án </h2>
+                                    <div class="form-item">
+                                        <p style="line-height: 2;"> Tên địa chỉ /Dự án </p>
+                                        <input type="text" name="ten_can_ho" class="form-control" placeholder="Tên căn hộ hoặc địa chỉ dự án" required>
+                                    </div>
+                                    
+                                    <div class="form-item">
+                                        <p>Loại dự án </p>
+                                    
+                                    <ul class="form-list">
+                                        <li><input class="style-checkbox" type="checkbox" id="canho" name="canho">
+                                        <label for="style-checkbox-1">Căn hộ</label>
+                                        </li>
+                                        <li><input class="style-checkbox"  type="checkbox" id="nhahang" name="nhahang">
+                                        <label for="style-checkbox-2">Nhà hàng</label>
+                                        </li>
+                                        <li><input class="style-checkbox"  type="checkbox" id="bietthu" name="bietthu">
+                                        <label for="style-checkbox-3">Biệt thự</label>
+                                        </li>
+                                        <li><input class="style-checkbox" type="checkbox" id="vila" name="vila">
+                                        <label for="style-checkbox-4">Vila</label>
+                                        </li>
+                                    </ul>
+                                    </div>
+                                    <div class="form-item">
+                                        <p>Dịch vụ yêu cầu </p>
+                                    
+                                        <ul class="form-list">
+                                            <li><input class="style-checkbox" id="style-checkbox-1" type="checkbox" id="thietkenoithat" name="thietkenoithat">
+                                            <label for="style-checkbox-1">Thiết kế nội thất</label>
+                                            </li>
+                                            <li><input class="style-checkbox" id="style-checkbox-2" type="checkbox" id="thicongnoithat" name="thicongnoithat">
+                                            <label for="style-checkbox-2">Thi công nội thất</label>
+                                            </li>
+                                           
+                                        </ul>
+                                    </div>
+                                    <div class="form-item">
+                                        <p style="line-height:2;">Yêu cầu </p>
+                                        <textarea style="padding:10px 0 ;" name="message" placeholder="Nhập nội dung " class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-item">
+                                        <div class="domt"> 
+                                            <button type="submit" class="btn btn-default" id="submit-form">Submit</button>
+                                    </div>
+                                </div>
+                                       
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-right">
+                            <h2>Thông tin liên hệ </h2>
+                            
+                                <div class="desc"><p>Bằng khát vọng, nỗ lực không ngừng, Sanchoz tự hào đã và đang tạo dựng được niềm tin với Quý Đối tác, Quý Khách hàng qua Dịch vụ thiết kế thi công nội thất uy tín, chất lượng, tôn vinh bản sắc "cá nhân" độc đáo.&nbsp;</p>
+                                    <p><strong>Sự hài lòng</strong> của Quý Khách hàng chính là thành công của thương hiệu Sanchoz.&nbsp;</p>
+                                    <p><br><strong>Trụ sở văn phòng:</strong> Khoa Công nghệ thông tin -FITDNU<br><strong>Thời gian làm việc:</strong>24h</p>
+                                </div>
+                            </div>
+                            <div class="maps">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.112005852711!2d105.75445837512693!3d20.948016680681285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452eac0f6d383%3A0x64c60a0d30589702!2zxJDhuqFpIEjhu41jIMSQ4bqhaSBOYW0!5e0!3m2!1sen!2s!4v1683968144093!5m2!1sen!2s" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer style="margin-top: 180px;" class="footer__web">
+                <div class="footer__web-container">
+                    <div id="footer-line-info">
+                        <ul class="footer-line-info-item">
+                            <li>
+                                <a href="https://www.facebook.com/ClevelandClinic" disablewebedit="True" class="footer-social__link" target="_blank">
+                                    <i class="fa-brands fa-facebook fa-lg"></i>
+                                    <span class="element-invisible">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/clevelandclinic" disablewebedit="True" class="footer-social__link" target="_blank">
+                                    <i class="fa-brands fa-square-twitter fa-lg"></i> 
+                                     <span class="element-invisible">Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/clevelandclinic" disablewebedit="True" class="footer-social__link" target="_blank">
+                                    <i class="fa-brands fa-youtube fa-lg"></i>
+                                    <span class="element-invisible">YouTube</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/clevelandclinic/" disablewebedit="True" class="footer-social__link" target="_blank">
+                                    <i class="fa-brands fa-instagram fa-lg"></i> 
+                                    <span class="element-invisible">Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/cleveland-clinic" disablewebedit="True" class="footer-social__link" target="_blank"> 
+                                    <i class="fa-brands fa-linkedin fa-lg"></i>
+                                    <span class="element-invisible">LinkedIn</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.pinterest.com/clevelandclinic/" disablewebedit="True" class="footer-social__link" target="_blank"> 
+                                    <i class="fa-brands fa-pinterest fa-xl"></i>
+                                    <span class="element-invisible">Pinterest</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.snapchat.com/add/clevelandclinic" disablewebedit="True" class="footer-social__link" target="_blank"> 
+                                    <i class="fa-brands fa-square-snapchat fa-lg"></i>
+                                     <span class="element-invisible">Snapchat</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__web-container-content">
+                        <div class="footer__web-container--logo">
+                            <a href="#">
+                                <img src="assets\img\Sanchoz.png">
+                            </a>
+                        </div>
+                        <div class="footer__web-container--info">
+                            <div class="col-lg-4">
+                                <div class="item">
+                                    <div class="item-main">
+                                       
+                                        <h1>More from Sanchoz</h1>
+                                    </div>
+                                    <ul class="item-content">
+                                        <li><a href="#"><p>Newsleter</p></a></li>
+                                        <li><a href="#"><p>Customer care</p></a></li>
+                                        <li><a href="#"><p>Verify subcription</p></a></li>
+                                        <li><a href="#"><p>Contact us</p></a></li>
+                                        <li><a href="#"><p>About vogue</p></a></li>
+                                        <li><a href="#"><p>Careers</p></a></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="item">
+                                    <div class="item-main">
+                                        
+                                        <h1>Blog, News & Apps</h1>
+                                    </div>
+                                    <ul class="item-content">
+                                        <li><a href="#"><p>Investors</p></a></li>
+                                        <li><a href="#"><p>Blog</p></a></li>
+                                        <li><a href="#"><p>Consult QD</p></a></li>
+                                        <li><a href="#"><p>New Contents</p></a></li>
+                                        <li><a href="#"><p>Magazine</p></a></li>
+                                        <li><a href="#"><p>ACCESSIBILITY HELP</p></a></li>
+                                    </ul>
+                                    
+                        </div>
+                               
+                            </div>
+                            <div class="col-lg-4">
+                            <div class="item">
+                                <div class="item-main">
+                                    
+                                    <h1>Site Information & Policies</h1>
+                                </div>
+                                <ul class="item-content">
+                                    <li><a href="#"><p>Send us feedback</p></a></li>
+                                    <li><a href="#"><p>Site Map</p></a></li>
+                                    <li><a href="#"><p>About this Website</p></a></li>
+                                    <li><a href="#"><p>Copyright, Reprint&Licensing</p></a></li>
+                                    <li><a href="#"><p>Website terms of use</p></a></li>
+                                    <li><a href="#"><p>Privacy Policy</p></a></li>
+                                </ul>
+                            </div>
+                               
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="reserved">
+            
+                    </div>
+                </div>
+            </footer>
+            <footer class="footer__web--mobile">
+                <div class="footer__web-container">
+                    <div id="footer-line-info">
+                        <ul class="footer-line-info-item">
+                            <li>
+                                <a href="https://www.facebook.com/trinhhao142.hayyier" disablewebedit="True" class="footer-social__link" target="_blank">
+                                    <i class="fa-brands fa-facebook fa-lg"></i>
+                                    <span class="element-invisible">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/clevelandclinic" disablewebedit="True" class="footer-social__link" target="_blank">
+                                    <i class="fa-brands fa-square-twitter fa-lg"></i> 
+                                     <span class="element-invisible">Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/clevelandclinic" disablewebedit="True" class="footer-social__link" target="_blank">
+                                    <i class="fa-brands fa-youtube fa-lg"></i>
+                                    <span class="element-invisible">YouTube</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/hayyie_142/" disablewebedit="True" class="footer-social__link" target="_blank">
+                                    <i class="fa-brands fa-instagram fa-lg"></i> 
+                                    <span class="element-invisible">Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/cleveland-clinic" disablewebedit="True" class="footer-social__link" target="_blank"> 
+                                    <i class="fa-brands fa-linkedin fa-lg"></i>
+                                    <span class="element-invisible">LinkedIn</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.pinterest.com/clevelandclinic/" disablewebedit="True" class="footer-social__link" target="_blank"> 
+                                    <i class="fa-brands fa-pinterest fa-xl"></i>
+                                    <span class="element-invisible">Pinterest</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.snapchat.com/add/clevelandclinic" disablewebedit="True" class="footer-social__link" target="_blank"> 
+                                    <i class="fa-brands fa-square-snapchat fa-lg"></i>
+                                     <span class="element-invisible">Snapchat</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__web-container-content">
+                        <div class="footer__web-container--logo">
+                            <a href="#">
+                                <img src="C:\Users\Admin\OneDrive\Tài liệu\LibraryCode\HTML_Document\DuanWeb001\assets\img\Sanchoz.png">
+                            </a>
+                        </div>
+                        <div class="footer__web-container--info">
+                            <div class="footer-title">
+                              <li class="footer-title-item"><i style="padding-right: 8px;" class="fa-sharp fa-solid fa-location-dot"></i>Hà Nội: Phố Xốm, Đại học Đại Nam, Khoa Công nghệ thông tin</li>
+                              <li class="footer-title-item"><i style="padding-right: 8px;" class="fa-solid fa-phone-volume"></i>1900 9278 - Mobile: 0866977663</li>
+                              <li class="footer-title-item"><i style="padding-right: 8px;" class="fa-solid fa-envelope"></i>haotrinh142@gmail.com</li>
+                              <li class="footer-title-item"><i style="padding-right: 8px;" class="fa-sharp fa-solid fa-globe"></i>sanchoz.com</li>
+                              <li class="footer-title-item"><i style="padding-right: 8px;" class="fa-brands fa-squarespace"></i>MSDN: 0107997210</li>
+                              <li class="footer-title-item"><a href="https://goo.gl/maps/ZXMiE83efrPJMbER8"><img width="20px" height="20px" src="https://th.bing.com/th/id/R.57ecf7876ba4b98439549292c619e1aa?rik=NcutETVQPpsnHw&riu=http%3a%2f%2fwww.newdesignfile.com%2fpostpic%2f2015%2f01%2fmap-icons-markers_20960.png&ehk=OYJa9dheunQCkjKHEtziOGO68zFjT55vN6dQJmx%2fRJM%3d&risl=&pid=ImgRaw&r=0"></a> Bản đồ chỉ dẫn</li>
+                              
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="item">
+                                    <div class="item-main">
+                                       
+                                        <h1>More from Sanchoz</h1>
+                                    </div>
+                                    <ul class="item-content">
+                                        <li><a href="#"><p>Newsleter</p></a></li>
+                                        <li><a href="#"><p>Customer care</p></a></li>
+                                        <li><a href="#"><p>Verify subcription</p></a></li>
+                                        <li><a href="#"><p>Contact us</p></a></li>
+                                        <li><a href="#"><p>Abou
+                                            ers</p></a></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="reserved">
+            
+                    </div>
+                </div>
+            
+        </footer>
+        </div>
+        
+        </body>

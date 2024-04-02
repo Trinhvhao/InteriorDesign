@@ -1,0 +1,225 @@
+
+.header{
+    height: 120px;
+    background-image: linear-gradient(0,rgb(0, 0, 0),rgba(37, 56, 59, 0.825));
+
+}
+.header__navbar-item{
+    display: inline-block;
+    list-style: none;
+    margin:8px;
+    
+}
+.header__navbar-item--haveQR:hover .header_qr {
+    display: block;
+
+}
+.header__navbar-item--haveNotify:hover .header__notify{
+    display: block;
+}
+.header_qr::before{
+    position: absolute;
+    width: 100%;
+    content: "";
+    display: block;
+    height: 30px;
+    
+    left:0;
+    top:-30px;
+}
+
+.header__navbar-list{
+    display: inline-block;
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar-item , .header__navbar-item-link{
+    display: inline-block;
+    font-size:1.5rem;
+    color: var(--white-color);
+    text-decoration:none;
+    font-weight: 300;
+
+}
+.header__navbar-item--strong{
+        font-weight: 900;
+}
+.header__navbar-item--separate::after{
+    content: "";
+    height: 0.9375rem;
+    
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid hsl(0, 25%, 89%);
+    position: relative;
+    left: 9px;
+    top: calc(50% - 7px);
+}
+.header__navbar-item:hover,
+.header__navbar-icon-link:hover,
+.header__navbar-item-link:hover{
+               color:rgba(255,255,255,0.7);
+               cursor:pointer;
+}
+.header__navbar-icon{
+    font-size: 20px;
+    margin-left: 5px;
+}
+.header__navbar-icon-link{
+    color:var(--white-color);
+    text-decoration: none;
+}
+.header__navbar-item--no-pointer{
+    cursor: text;
+    color: #ffffff;
+}
+.header_qr{
+    background-color: #ffffff;
+    width: 200px;
+    position: absolute;
+    left: 200px;
+    top:70px;
+    padding: 8px;
+    margin: 0;
+    display: none; 
+    animation: fadein ease-in 0.3s;
+}
+.header__qr-img{
+    width: 100%;   /*anh nam gon trong phan tu cha the div)*/
+}
+.header__qr-apps{
+    display: flex;
+    margin: 0s;
+    
+}
+.header__qr-link{
+    font-size: 5px;
+}
+.header__qr-link:nth-child(1){
+    margin-left: 11px;
+}
+.header__qr-link:nth-child(2){
+    margin-left: 11px;
+}
+.header__qr--download-img{
+    height: 20px;
+    margin: 5px;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 2px;
+    margin-right: 5px;
+}
+
+/*Header notification   */
+
+.header__notify{
+   position: fixed;
+   top:60px;
+   right:500px;
+   width: 404px;
+   background-color: #ffffff;
+  border: 1px solid grey;
+  user-select: none;
+  transform-origin: right top;
+  -moz-transform-origin: right top;
+  -webkit-transform-origin: right top;
+  -o-transform-origin: right top;
+  -ms-transform-origin: right top;
+  animation: headerNotifyGrowth ease-in 0.2s;
+  display: none;
+}
+.header__notify::before{
+    content: "";
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    right: 20px;
+    top: -20px;
+    border-width: 20px;
+    border-top: 20px;
+}
+.header__notify::after{
+      content:"";
+      position: absolute;
+      width:400px;
+
+      height: 30px;
+      top:-25px;
+
+}
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform:scaleX(1);
+    }
+}
+.header__notify-header{
+       background-color: white;
+       height: 40px;
+       cursor: default;
+       
+}
+ p {
+    color:#666;
+    font: size 1.5em;
+    font-weight: 400px;
+    margin: 12px 12px;
+}
+.header__notify-list{
+   padding-left: 0;
+
+}
+.header__notify-item:hover{
+    background-color: #e5e3e2;
+}
+.header__notify-item--viewed{
+       background-color: rgb(247, 227, 222);
+
+}
+.header__notify-link{
+    display:flex;
+    padding:12px;
+    text-decoration: none;
+    
+}
+.header__notify-img{
+    width: 50px;
+    height: 50px;
+
+}
+.header__notify-info{
+   margin-left: 12px;;
+
+}
+.header__notify-name{
+    display: block;
+    font-size: 1.4rem;
+   color: black;
+   font-weight: 700;
+}
+.header__notify-description{
+    display: block;
+    font-size:1.2rem;
+    color:#756F6E;
+    line-height: 2rem;
+    margin-top: 4px;
+
+}
+.header__notify-footer{
+    display: flex;
+    height: 40px;
+    
+}
+.header__notify-footer-btn{
+    text-decoration: none;
+    padding:12px;
+    margin:auto;
+}
+.link-list-item{
+    padding:0 30px ;
+}

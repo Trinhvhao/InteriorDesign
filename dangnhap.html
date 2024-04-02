@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="test.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            padding:10px;
+            background-position: center;
+            align-items: center;
+            background-image: url("C:/Users/Admin/OneDrive/Tài liệu/LibraryCode/HTML_Document/DuanWeb001/assets/img/qvo16p0n20220607102443.jpg");
+        }
+        .input-container{
+            max-width:700px;
+            width:100%;
+           
+            background-color: #a8dfe4a6;
+            padding:25px 30px;
+            border-radius: 5px;
+        }
+        .input-container .title{
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        .user-details {
+            display: flex;
+            /* justify-content: ;
+            flex-direction: column; */
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .input-box{
+            margin:20px 0 12px 0 ;
+            width:calc(100% / 2 - 20px);
+        }
+        .input-box input{
+            height: 45px;
+            width: 100%;
+            outline:none;
+            border-radius: 5px;
+            text-indent: 10px;
+            margin-top: 10px;
+        }
+        .input-box span{
+            margin-bottom:5px ;
+        }
+        .input-button{
+            margin:30px auto;
+            text-align: center;
+        }
+        .input-button button{
+    
+    width: 200px;
+    background-color: #92d2cc;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 700;
+    text-shadow: 0 0 10px #c665c6;
+        }
+    .register-login{
+        /* position: absolute;
+    bottom: 100px;
+    right: 437px; */
+    }
+    </style>
+    <script>
+        function showAlertAndRedirect() {
+            alert("Di chuyển đến trang chủ --->");
+            // window.location.href = "C:/Users/Admin/OneDrive/Tài liệu/LibraryCode/HTML_Document/DuanWeb001/index.html"; // Điều hướng đến trang khác
+        }
+        function sendForm() {
+    // đem tất cả dữ liệu trong form id là 'google-form' gom thành biến data
+    let data = $('#google-form').serialize();
+
+    $.ajax({ //Sử dụng Ajax gửi dữ liệu đi
+        url: 'https://script.google.com/macros/s/AKfycbyp6NLnu3CqeAoFPtXl_NI9B0qfh6R8PQ_ZFPZwL7VzdrZK-8d8fJsRw86RWM9dGyWiQw/exec',
+        method: 'GET',
+        dataType: 'json',
+        data: data,
+        success: function(responseData, textStatus, jqXHR) {
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(errorThrown);
+        }
+    });
+ 
+    window.jQuery(this).trigger('reset');
+    alert("Thông báo: Đã đăng kí thành công! . Chào mừng đến với Interior Design");
+    
+    
+    return true;
+};
+
+
+    </script>
+</head>
+<body>
+    <div class="input-container">
+        <div class="title"><p style="text-shadow:1px 1px aqua"><strong>Sanchoz Design</strong></p>Registration</div>
+        <form id="google-form" onsubmit="return sendForm();">
+            <div class="user-details">
+                <div class="input-box">
+                    <span>Full name</span>
+                    <input type="text" name="fullname" placeholder="Enter your name" id="fullname" required>
+                </div>
+                
+                    <div class="input-box">
+                        <span>User name</span>
+                        <input type="text" placeholder="Enter your name" name="username" id="username" required>
+                </div>
+                
+                    <div class="input-box">
+                            <span>Email</span>
+                            <input type="text" name="email" placeholder="Email" id="email" required>
+                </div>    
+              
+                            <div class="input-box">
+                                <span>Phone number</span>
+                                <input type="text" name="phonenumber" placeholder="Number" id="phonenumber" required>
+                </div>
+                
+                    <div class="input-box">
+                        <span>Password</span>
+                        <input type="text" placeholder="Password" name="pass" id="pass" required>
+                </div>
+               
+                    <div class="input-box">
+                        <span>Confirm Password</span>
+                        <input type="text" placeholder="pass" required>
+                </div>
+                <div class="input-button">
+                    <button type="submit" class="btn btn-default" onclick="showAlertAndRedirect()" id="submit-form">Submit</button>
+                    
+                    <div class="register-login">
+                    <p>Bạn đã có tài khoản rồi? <a href="#">Đăng nhập</a>.</p>
+                    </div>
+                </div>
+                </div>
+                
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Python_Document"
+		},
+		{
+			"path": "../../js"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HTML_Document"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": []
+	}
+}
